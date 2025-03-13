@@ -18,9 +18,9 @@
       }
       
       .hero {
-        background: url('./images/427682993_1527052797869773_4504903910392821687_n.jpeg') no-repeat;
+        background: url('./images/image.png') no-repeat;
         background-position: center 20%;
-        padding: 100px 0;
+        padding: 150px 0;
         text-align: center;
         color: #fff;
       }
@@ -44,6 +44,11 @@
       .btn-custom {
         text-transform: uppercase;
         letter-spacing: 0.1rem;
+      }
+      @media (max-width: 768px) {
+        .spotify-embed {
+          aspect-ratio: 9 / 16;
+        }
       }
     </style>
   </head>
@@ -95,20 +100,14 @@
         <div class="row">
           <div class="col-md-6 video-embed">
             <div class="ratio ratio-16x9">
-              <iframe
-                src="https://www.youtube.com/embed/S5OjLyVM4ns"
-                title="YouTube Video 1"
-                allowfullscreen
-              ></iframe>
+              <iframe width="1905" height="758" src="https://www.youtube.com/embed/cRf-9Z5vKpA" 
+                title="PRINCESA - Lyric Vídeo Oficial, Samuka Britto" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
           </div>
           <div class="col-md-6 video-embed">
             <div class="ratio ratio-16x9">
-              <iframe
-                src="https://www.youtube.com/embed/lNg9WIno7mU"
-                title="YouTube Video 2"
-                allowfullscreen
-              ></iframe>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/S5OjLyVM4ns?si=gKezqGGilKHLjXMD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
           </div>
         </div>
@@ -125,7 +124,7 @@
       
       <section id="spotify" class="my-5">
         <h2>Spotify</h2>
-        <div class="ratio ratio-16x9">
+        <div class="ratio ratio-16x9 spotify-embed">
           <iframe
             src="https://open.spotify.com/embed/artist/5QgbOrBckyUFzyUxEHHe5b"
             frameborder="0"
