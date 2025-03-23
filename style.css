@@ -1,0 +1,355 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  ::-webkit-scrollbar{
+    display: none;
+  }
+
+  body {
+    color: #d315c3;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+  
+  
+  .container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
+    z-index: 2;
+  }
+  
+
+  .cover-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url('../images/samukaBritto.jpeg') no-repeat center/80%;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+  }
+  
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 0;
+    z-index: 10;
+    transition: background-color 0.3s;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  .navbar-menu {
+    display: flex;
+    list-style: none;
+  }
+  
+  .navbar-menu li {
+    margin-left: 2rem;
+  }
+  
+  .navbar-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+  }
+  
+  .navbar-menu a:hover {
+    color: #ff69b4;
+  }
+  
+  .navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .navbar-toggle svg {
+    fill: #fff;
+  }
+  
+  @keyframes flicker {
+    
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+      text-shadow:
+      0 0 4px #2600ff,
+      0 0 11px #9421e0,
+      0 0 19px #880772,
+      0 0 40px #0fa,
+      0 0 80px #0fa,
+      0 0 90px #0fa,
+      0 0 100px #0fa,
+      0 0 150px #0fa;
+  
+  }
+  
+  20%, 24%, 55% {        
+      text-shadow: none;
+  }    
+}
+  
+  .hero-content {
+    transform: translateY(-30px);
+  }
+  
+  .hero-content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    animation: flicker 1.5s infinite alternate;
+    color: #fff;
+  }
+  
+  .hero-content p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    animation: flicker 2s infinite alternate 0.5s;
+    color: #fff;
+  }
+  
+
+  .content-section {
+    min-height: 100vh;
+    padding: 100px 0 150px 0;
+    position: relative;
+    z-index: 5;
+    display: none;
+  }
+  
+  .content-section.active {
+    display: block;
+  }
+  
+
+  section h2 {
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 2.5rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+  }
+  
+  section h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #ff69b4;
+  }
+  
+
+  .video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+  
+  .video-item {
+    flex: 0 0 50%;
+    padding: 0 15px;
+    margin-bottom: 40px;
+  }
+  
+  .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; 
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  
+
+  .spotify-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; 
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    margin-bottom: 40px;
+  }
+  
+  .spotify-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  
+
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .btn-primary {
+    background-color: #ff69b4;
+    color: #fff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #ff4da6;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn-danger {
+    background-color: #ff69b4;
+    color: #fff;
+  }
+  
+  .btn-danger:hover {
+    background-color: #ff4da6;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .mt-4 {
+    margin-top: 2rem;
+  }
+
+  .footer {
+    background-color: #222;
+    padding: 2rem 0;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    z-index: 6;
+  }
+  
+ 
+  .animation-circle {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #ff69b4;
+    z-index: 9;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0);
+    transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+  }
+  
+  .animation-circle.active {
+    opacity: 1;
+    transform: scale(22);
+  }
+  
+ 
+  @media (max-width: 768px) {
+    .navbar-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 1rem 0;
+    }
+    
+    .navbar-menu.active {
+      display: flex;
+    }
+    
+    .navbar-menu li {
+      margin: 0;
+      padding: 0.8rem 1.5rem;
+      text-align: center;
+    }
+    
+    .navbar-toggle {
+      display: block;
+    }
+    
+    .video-item {
+      flex: 0 0 100%;
+    }
+    
+    .hero-content h1 {
+      font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+      font-size: 1.2rem;
+    }
+    .spotify-wrapper{
+      padding-bottom: 180%;
+    }
+
+    .cover-page{
+      background: url('../images/samukaBritto.jpeg') no-repeat 73%;
+    }
+  }
+
+  @media(max-width: 460px){
+    .spotify-wrapper{
+      padding-bottom: 200%;
+    }
+  }
