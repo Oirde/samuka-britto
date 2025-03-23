@@ -345,6 +345,7 @@
 
     .cover-page{
       background: url('./images/image.png') no-repeat 73%;
+      background-size: cover;
     }
   }
 
